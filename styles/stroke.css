@@ -1,0 +1,55 @@
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0.25;
+  }
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+path:nth-last-child(2), path:last-child {
+  animation: draw 2.5s 1 ease-in forwards;
+}
+path:not(:nth-last-child(2), :last-child) {
+  animation:
+    draw 2.5s 1 ease-in forwards,
+    fade 5s 1 2s ease-in forwards;
+}
+
+path:nth-child(1) {
+  animation-delay: 0.0s;
+}
+path:nth-child(2) {
+  animation-delay: 0.2s;
+}
+path:nth-child(3) {
+  animation-delay: 0.4s;
+}
+path:nth-child(4) {
+  animation-delay: 0.6s;
+}
+path:nth-child(5) {
+  animation-delay: 0.8s;
+}
+path:nth-child(6) {
+  animation-delay: 1.0s;
+}
+path:nth-child(7) {
+  animation-delay: 1.2s;
+}
+path:nth-child(8) {
+  animation-delay: 1.4s;
+}
+path:nth-child(9) {
+  animation-delay: 1.6s;
+}
+path:nth-child(10) {
+  animation-delay: 1.8s;
+}
